@@ -1,12 +1,14 @@
 import streamlit as st
 import joblib
 import time
+import os
 
+st.set_page_config("Network Failure Prediction", "🖧")
 
 @st.cache_resource
 def load_model_and_scaler():
-    model = joblib.load("logreg.pkl")
-    scaler = joblib.load("scaler.pkl")
+    model = joblib.load(os.path.join(os.getcwd(), "logreg.pkl"))
+    scaler = joblib.load(os.path.join(os.getcwd(),"scaler.pkl"))
     
     return model, scaler
 
