@@ -31,7 +31,7 @@ temp = st.number_input("What is the device's temperature in ℃?")
 cpu_usage = st.number_input("What is the device's CPU usage?")
 mem_usage = st.number_input("What is the device's memory usage?")
 error_rate = st.number_input("What is the device's error rate?")
-uptime = st.number_input("What is the device's uptime in seconds (e.g 16.2)")
+uptime = st.number_input("What is the device's uptime in hours (e.g 16.2)")
 
 array = [device_map.get(device_type), temp, cpu_usage, mem_usage, error_rate, uptime]
 
